@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <script src="https://rawgit.com/x-tag/core/master/dist/x-tag-core.js"></script>
+    <script src="https://cdn.rawgit.com/sindresorhus/multiline/master/browser.js"></script>
+    <script src="static/app.js" async></script>
+    <style>
+        body {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h1>Dialectica</h1>
+<div>
+    <app-store dialectic>
+        <app-router>
+            <route path="/" component="container-welcome"></route>
+            <route path="/dialectic" component="container-dialectic" dialectic></route>
+        </app-router>
+    </app-store>
+</div>
+<div>This is a footer</div>
+</body>
+</html>

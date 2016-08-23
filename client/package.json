@@ -1,0 +1,38 @@
+{
+  "name": "dialectica",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/webpack/bin/webpack.js --progress --colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardanaya/inventory3d.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardanaya/inventory3d/issues"
+  },
+  "homepage": "https://github.com/richardanaya/inventory3d#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-history-api-fallback": "^2.0.0",
+    "freezer-js": "^0.11.1",
+    "page": "^1.7.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "webpack": "^1.13.1",
+    "nodemon": "^1.9.2",
+    "css-loader": "^0.23.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "webpack-node-externals": "^1.2.0"
+  }
+}
