@@ -1,6 +1,15 @@
 import sys
 import uuid
+import os
 from flask import Flask, request, jsonify
+from os.path import join, dirname
+from dotenv import load_dotenv
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+SECRET_KEY = os.environ.get("SECRET_KEY")
+print SECRET_KEY
+
 app = Flask(__name__)
 
 
