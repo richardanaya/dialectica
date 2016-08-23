@@ -13,7 +13,7 @@ def thesis(id=None):
     try:
         if request.method == 'GET':
             if id not in thesises:
-                return jsonify({'message':"Thesis does not exists"})
+                return jsonify({'message':"Thesis does not exists"}), 500
             return jsonify(thesises[id])
         elif request.method == 'POST':
             data = request.json
@@ -22,7 +22,7 @@ def thesis(id=None):
             return jsonify(thesises[new_id])
         elif request.method == 'PUT':
             if id not in thesises:
-                return jsonify({'message':"Thesis does not exists"})
+                return jsonify({'message':"Thesis does not exists"}), 500
             data = request.json
             if 'text' in data:
                 thesises[id]['text'] = data['text']
@@ -40,7 +40,7 @@ def thesis(id=None):
                 return "removing"
             return jsonify(thesises[id])
     except:
-        return jsonify({'message':"Unknown error occurred"})
+        return jsonify({'message':"Unknown error occurred"}), 500
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
